@@ -24,7 +24,8 @@ const { label, stock } = product
 console.log(label)
 console.log(stock)
 
-const transaction = (type, { label, stock }) => {
+// when the object is empty, and you do destructuring, make sure you handle undefined
+const transaction = (type, { label, stock } = {}) => {
     console.log(type, label, stock)
 }
 
